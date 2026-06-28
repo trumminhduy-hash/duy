@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Music Profile</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:#07111f;
+color:#fff;
+padding:20px;
+}
+
+.container{
+max-width:450px;
+margin:auto;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+text-align:center;
+margin:20px 0;
+color:#43b0ff;
+}
+
+.card{
+background:#10233c;
+border-radius:20px;
+padding:18px;
+margin-bottom:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+transition:.3s;
+cursor:pointer;
+}
+
+.card:hover{
+background:#163055;
+transform:translateY(-3px);
+}
+
+.left{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.icon{
+width:55px;
+height:55px;
+border-radius:50%;
+background:#1d3d68;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:24px;
+}
+
+.title{
+font-size:18px;
+font-weight:600;
+}
+
+.sub{
+font-size:13px;
+color:#9db4d6;
+}
+
+.arrow{
+font-size:25px;
+color:#4fa9ff;
+}
+
+h2{
+margin:25px 0 15px;
+}
+
+.search{
+width:100%;
+padding:15px;
+border:none;
+outline:none;
+border-radius:15px;
+background:#10233c;
+color:#fff;
+font-size:16px;
+margin-bottom:15px;
+}
+
+.music{
+background:#10233c;
+border-radius:18px;
+padding:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:12px;
+}
+
+.music-name{
+font-size:15px;
+font-weight:600;
+}
+
+.download{
+width:45px;
+height:45px;
+border-radius:50%;
+background:#2b5ea3;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:22px;
+cursor:pointer;
+}
+
+.download:hover{
+background:#3e82df;
+}
+
+footer{
+text-align:center;
+margin-top:30px;
+color:#7e96b8;
+font-size:13px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">
+🎵 THWIH MUSIC
+</div>
+
+<div class="card">
+<div class="left">
+<div class="icon">🎵</div>
+<div>
+<div class="title">TikTok</div>
+<div class="sub">@thwih1</div>
+</div>
+</div>
+<div class="arrow">›</div>
+</div>
+
+<div class="card">
+<div class="left">
+<div class="icon">✈</div>
+<div>
+<div class="title">Telegram</div>
+<div class="sub">@music</div>
+</div>
+</div>
+<div class="arrow">›</div>
+</div>
+
+<div class="card">
+<div class="left">
+<div class="icon">💬</div>
+<div>
+<div class="title">Zalo Group</div>
+<div class="sub">Cộng đồng âm nhạc</div>
+</div>
+</div>
+<div class="arrow">›</div>
+</div>
+
+<div class="card">
+<div class="left">
+<div class="icon">☎</div>
+<div>
+<div class="title">Liên hệ</div>
+<div class="sub">Hợp tác & hỗ trợ</div>
+</div>
+</div>
+<div class="arrow">›</div>
+</div>
+
+<h2>🎵 Lấy Nhạc</h2>
+
+<div class="card">
+<div class="left">
+<div class="icon">🎼</div>
+<div>
+<div class="title">Get Music 2026</div>
+<div class="sub">Tải miễn phí</div>
+</div>
+</div>
+<div class="arrow">›</div>
+</div>
+
+<h2>🔍 Tìm kiếm</h2>
+
+<input type="text" class="search" placeholder="Nhập tên bài hát..." onkeyup="searchSong(this.value)">
+
+<div id="list">
+
+<div class="music">
+<div class="music-name">
+Con Đường Mưa 2026
+</div>
+<div class="download">⬇</div>
+</div>
+
+<div class="music">
+<div class="music-name">
+Sau Này Em Cưới Ai Rồi
+</div>
+<div class="download">⬇</div>
+</div>
+
+<div class="music">
+<div class="music-name">
+Vegas
+</div>
+<div class="download">⬇</div>
+</div>
+
+<div class="music">
+<div class="music-name">
+Bạn Tình Ơi
+</div>
+<div class="download">⬇</div>
+</div>
+
+<div class="music">
+<div class="music-name">
+Hồi Ức Ta Đã Yêu
+</div>
+<div class="download">⬇</div>
+</div>
+
+</div>
+
+<footer>
+© 2026 THWIH MUSIC
+</footer>
+
+</div>
+
+<script>
+function searchSong(text){
+
+text=text.toLowerCase();
+
+let songs=document.querySelectorAll(".music");
+
+songs.forEach(song=>{
+
+let name=song.innerText.toLowerCase();
+
+song.style.display=name.includes(text)?"flex":"none";
+
+});
+
+}
+</script>
+
+</body>
+</html>
